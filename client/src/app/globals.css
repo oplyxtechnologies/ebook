@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+.nav {
+  @apply h-[80px] w-full shadow-md px-10 flex items-center justify-end gap-7 [&>div]:cursor-pointer [&>span]:cursor-pointer;
+}
+.nav-image {
+  @apply bg-[url('https://imgs.search.brave.com/wU1UkDCknb04Yq3MzGzhOm4BU_j00m2xl0A9in8yJJg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA2LzkzLzcwLzQ2/LzM2MF9GXzY5Mzcw/NDY0MV9naGpOaFc0/cUlET2xaenMzSU0z/Y0hmalFxZ3BHZU12/dC5qcGc')] h-[40px] w-[40px] rounded-full overflow-hidden bg-cover bg-center;
+}
+.nav-notification-dot {
+  @apply text-red-700 text-[80px] absolute top-[-55px] ml-[14px];
+}
