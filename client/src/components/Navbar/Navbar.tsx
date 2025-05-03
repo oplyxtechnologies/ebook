@@ -55,8 +55,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      <hr className="my-2 border-t border-neutral-100" />
-
       {/* Desktop Navigation */}
       <nav className="hidden sm:flex max-w-7xl justify-center items-center mx-auto gap-6">
         <ul className="flex gap-6">
@@ -96,6 +94,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      <hr className="my-2 border-t border-neutral-100" />
     </div>
   );
 };
