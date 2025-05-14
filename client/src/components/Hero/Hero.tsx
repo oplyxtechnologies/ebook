@@ -1,42 +1,76 @@
-import Image from "next/image";
-import React from "react";
-import { Button } from "../ui/Button";
+"use client";
 
-const Hero = () => {
+import Image from "next/image";
+import { Button } from "@/components/ui/Button";
+import { IdCard, SquarePlus } from "lucide-react";
+
+const HeroSection = () => {
   return (
-    <section className="pt-32 md:pt-40 pb-16 bg-white">
-      <div className="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto px-4 gap-10">
-        {/* Left Text Section */}
-        <div className="flex flex-col gap-6 w-full md:w-1/2 text-center md:text-left">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-[#1a1c1c] tracking-tight">
-            Your Library, Anywhere.
+    <section className="relative w-full min-h-screen text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/hero.jpg"
+          alt="Background"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/80" /> {/* Dark overlay */}
+      </div>
+
+      {/* Hero Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-32 pb-28 sm:pb-40 text-center">
+        <div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight">
+            Unlimited eBooks, audiobooks, and more
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-500">
-            Access thousands of titles anytime, on any device — all in one
-            platform.
+          <p className="mt-4 text-lg sm:text-xl text-gray-200">
+            Starts at $24.99. Cancel Anytime.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-            <Button size="lg">Join Now</Button>
-            <Button variant="secondary" size="lg" className="hover:shadow-xl">
-              Explore More
-            </Button>
+
+          {/* Email Input + Button */}
+          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <input
+              type="email"
+              placeholder="Email address"
+              className="px-4 py-2 rounded-md text-black w-72"
+            />
+            <Button className="px-6 py-2">Get Started</Button>
+          </div>
+
+          {/* Onboarding Steps */}
+          <div className="mt-12 flex flex-col pb-18 sm:flex-row gap-6 justify-center items-center text-sm text-gray-300">
+            <div className="justify-center flex-col flex items-center gap-2">
+              <SquarePlus />
+              <h1>Hello</h1>
+              <p>hi hellofnjkn nces</p>
+            </div>
+            <div className="justify-center flex-col flex items-center gap-2">
+              <IdCard />
+              <h1>Hello</h1>
+              <p>hi hellofnjkn nces</p>
+            </div>
+            <div>
+              <h1>Hello</h1>
+              <p>hi hellofnjkn nces</p>
+            </div>
           </div>
         </div>
-
-        {/* Right Image Section */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <Image
-            src="/hero.svg"
-            width={500}
-            height={500}
-            alt="Hero section image"
-            className="w-full h-auto max-w-md sm:max-w-lg md:max-w-full"
-            priority
-          />
-        </div>
+      </div>
+      {/* Bottom Curve */}
+      <div className="absolute -bottom-0 sm:-bottom-24 md:-bottom-32 lg:-bottom-64 left-0 w-full pointer-events-none z-10">
+        <Image
+          src="/herogra.svg"
+          alt="Bottom Mask"
+          width={1920}
+          height={400}
+          className="w-full h-auto"
+          priority
+        />
       </div>
     </section>
   );
 };
 
-export default Hero;
+export default HeroSection;
