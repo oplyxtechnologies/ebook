@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
+import Navbar from "@/components/Navbar/Navbar";
 
 // Fonts
 const satoshi = localFont({
@@ -84,7 +85,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${satoshi.variable} `}>
       <body className="antialiased bg-[#141414]  ">
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
       </body>
     </html>

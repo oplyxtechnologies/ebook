@@ -20,7 +20,7 @@ const HeroSection = () => {
       </div>
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-32 pb-28 sm:pb-40 text-center">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 pt-32 pb-28 mt-10 sm:pb-40 text-center">
         <div>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium leading-tight tracking-tight">
             Unlimited eBooks, audiobooks, and more
@@ -59,7 +59,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Bottom Curve */}
-      <div className="absolute -bottom-0 sm:-bottom-24 md:-bottom-32 lg:-bottom-64 left-0 w-full pointer-events-none z-10">
+      <div className="absolute bottom-0 left-0 w-full pointer-events-none z-10">
         <Image
           src="/herogra.svg"
           alt="Bottom Mask"
