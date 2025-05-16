@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
-import { IdCard, SquarePlus } from "lucide-react";
+import { BookHeadphones, IdCard, SquarePlus } from "lucide-react";
 
 const HeroSection = () => {
   return (
@@ -30,13 +30,13 @@ const HeroSection = () => {
           </p>
 
           {/* Email Input + Button */}
-          <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="mt-6 flex flex-col sm:flex-row gap-5 justify-center items-center ">
             <input
               type="email"
               placeholder="Email address"
-              className="px-4 py-2 rounded-md text-black w-72"
+              className="px-4 py-2  text-[#fffff]/50 w-72 bg-[#ffffff]/10 rounded-sm focus:outline-md focus:outline-[#ffffff]/30 focus:outline-2 transition-all duration-300 "
             />
-            <Button className="px-6 py-2">Get Started</Button>
+            <Button className="px-6 py-2 rounded-sm ">Get Started</Button>
           </div>
 
           {/* Onboarding Steps */}
@@ -51,7 +51,8 @@ const HeroSection = () => {
               <h1>Hello</h1>
               <p>hi hellofnjkn nces</p>
             </div>
-            <div>
+            <div className="justify-center flex-col flex items-center gap-2">
+              <BookHeadphones />
               <h1>Hello</h1>
               <p>hi hellofnjkn nces</p>
             </div>

@@ -6,16 +6,17 @@ import { cn } from "@/lib/utils"; // utility to merge classes
 
 // Variant Definitions
 const buttonVariants = cva(
-  "inline-flex items-center justify-center rounded-md font-medium transition-all  disabled:opacity-50 disabled:pointer-events-none",
+  "inline-flex items-center justify-center transition-all  disabled:opacity-50 disabled:pointer-events-none",
   {
     variants: {
       variant: {
-        primary: "bg-green-600 text-white hover:bg-green-700 hover:shadow-2xl ",
+        primary:
+          "bg-[#4CFFAB] text-[#2B2B2B] hover:bg-[#00FF67] hover:shadow-2xl ",
         secondary: "bg-gray-100 text-gray-900 hover:bg-gray-200",
-        ghost: "bg-transparent text-green-600 hover:underline",
-        error: "bg-red-500 text-white hover:bg-red-600",
-        form: "bg-green-600 text-white hover:bg-green-700",
-        cta: "bg-green-600 text-white hover:bg-green-700 text-base font-semibold",
+        ghost: "bg-transparent text-[#4CFFAB] hover:underline",
+        error: "bg-red-500 text-[#2B2B2B] hover:bg-red-600",
+        form: "bg-[#4CFFAB] text-[#2B2B2B] hover:bg-[#00FF67]",
+        cta: "bg-[#4CFFAB] text-[#2B2B2B] hover:bg-[#00FF67] text-base font-semibold",
         subtle: "bg-red-100 text-red-700 hover:bg-red-200",
       },
       size: {
