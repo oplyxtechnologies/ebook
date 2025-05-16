@@ -29,11 +29,11 @@ const Trandingnow = () => {
     <div className="text-white max-w-7xl mx-auto px-4 py-10">
       <h2 className="text-2xl font-semibold mb-10">Trending Now</h2>
 
-      <div className="relative max-w-6xl mx-auto">
+      <div className=" max-w-6xl mx-auto flex gap-4">
         {/* Left Arrow */}
         <button
           onClick={() => slider.current?.prev()}
-          className="absolute left-0 rounded-sm top-0 bottom-0 z-10 w-10 bg-[#1d1d1d]/80 hover:bg-[#333] flex items-center justify-center"
+          className=" rounded-sm  w-10 bg-[#1d1d1d]/80 hover:bg-[#333] flex items-center justify-center"
         >
           <ArrowLeft />
         </button>
@@ -59,7 +59,7 @@ const Trandingnow = () => {
         {/* Right Arrow */}
         <button
           onClick={() => slider.current?.next()}
-          className="absolute right-0 top-0 rounded-sm bottom-0 z-10 w-10 bg-[#1d1d1d]/80 hover:bg-[#333] flex items-center justify-center"
+          className=" rounded-sm  w-10 bg-[#1d1d1d]/80 hover:bg-[#333] flex items-center justify-center"
         >
           <ArrowRight />
         </button>

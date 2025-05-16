@@ -59,7 +59,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* Bottom Curve */}
-      <div className="absolute bottom-0 left-0 w-full pointer-events-none z-10">
+      <div className="absolute -bottom-0 left-0 w-full pointer-events-none z-10">
         <Image
           src="/herogra.svg"
           alt="Bottom Mask"
