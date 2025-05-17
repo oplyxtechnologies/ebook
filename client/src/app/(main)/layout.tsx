@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "../globals.css";
 import Navbar from "@/components/Navbar/NavbeforeSignIn";
+import Footer from "@/components/Footer/FooterWithSignUp";
 
 // Fonts
 const satoshi = localFont({
@@ -87,6 +88,7 @@ export default function RootLayout({
       <body className="antialiased bg-[#141414]  ">
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

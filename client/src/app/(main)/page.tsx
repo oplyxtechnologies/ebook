@@ -6,7 +6,6 @@ import Trandingnow from "@/components/Landing/Trandingnow";
 export default function Home() {
   return (
     <div className="">
-      {/* Hero Section  */}
       <Hero />
       <Trandingnow />
       <TopFeatures />
