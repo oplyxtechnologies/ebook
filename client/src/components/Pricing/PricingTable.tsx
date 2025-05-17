@@ -108,7 +108,7 @@ const PricingTable = () => {
         </div>
 
         {/* Table with sticky column + row */}
-        <div className="overflow-x-auto h-96 lg:h-full ">
+        <div className="overflow-x-auto h-96 md:h-full ">
           <table className="w-full  table-fixed  border-collapse min-w-[700px] text-sm text-left">
             <thead>
               <tr className="text-white border-b border-white/20 bg-[#141414]/80   backdrop-blur-xl z-30  sticky top-0 ">
