@@ -43,9 +43,6 @@ const Navbar = () => {
               className="h-10 w-auto"
             />
           </a>
-          <a href="/auth">
-            <Button className="cursor-pointer rounded-sm">Sign In</Button>
-          </a>
         </div>
       </div>
     </div>
