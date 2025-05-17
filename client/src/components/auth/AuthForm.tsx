@@ -74,6 +74,7 @@ const AuthForm = () => {
           alt="gradient"
           fill
           className="object-cover object-center"
+          priority
         />
       </div>
 

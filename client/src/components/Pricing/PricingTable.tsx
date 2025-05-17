@@ -70,7 +70,7 @@ const PricingTable = () => {
 
   return (
     <section className="relative px-4 py-16 text-white overflow-hidden">
-      {/* Gradient Background */}
+      {/* Background Gradient */}
       <div className="absolute inset-0 -z-10">
         <Image
           src="/bggradient.svg"
@@ -80,7 +80,6 @@ const PricingTable = () => {
         />
       </div>
 
-      {/* Table Container */}
       <div className="relative z-10 max-w-7xl mx-auto mt-16 bg-[#616161]/13 rounded-xl border border-white/10 shadow-xl backdrop-blur-4xl">
         <div className="text-center px-6 py-10">
           <h2 className="text-3xl sm:text-4xl font-semibold">Stuzip Pricing</h2>
@@ -88,7 +87,6 @@ const PricingTable = () => {
             Billed {isYearly ? "Yearly" : "Monthly"}
           </p>
 
-          {/* Toggle */}
           <div className="mt-4 inline-flex p-1 border border-[#A1A1A1]/50 rounded-md">
             {["Yearly", "Monthly"].map((label, idx) => {
               const active = (label === "Yearly") === isYearly;
@@ -109,12 +107,14 @@ const PricingTable = () => {
           </div>
         </div>
 
-        {/* Table */}
-        <div className="overflow-x-auto">
-          <table className="w-full table-fixed border-collapse min-w-[700px] text-sm text-left">
+        {/* Table with sticky column + row */}
+        <div className="overflow-x-auto h-96 lg:h-full ">
+          <table className="w-full  table-fixed  border-collapse min-w-[700px] text-sm text-left">
             <thead>
-              <tr className="text-white border-b border-white/20">
-                <th className="p-4 font-semibold">Features</th>
+              <tr className="text-white border-b border-white/20 bg-[#141414]/80   backdrop-blur-xl z-30  sticky top-0 ">
+                <th className="p-4 font-semibold sticky left-0 z-30 bg-[#141414]/90  backdrop-blur-xl">
+                  Features
+                </th>
                 {plans.map((plan, i) => (
                   <th key={i} className="p-4 text-center font-semibold">
                     <div>{plan}</div>
@@ -132,8 +132,10 @@ const PricingTable = () => {
                   : feature.values[billingType];
 
                 return (
-                  <tr key={idx} className="border-b border-white/10">
-                    <td className="p-4 font-medium">{feature.title}</td>
+                  <tr key={idx} className="border-b border-white/10   ">
+                    <td className="p-4 font-medium sticky left-0 bg-[#141414]/80  backdrop-blur-xl z-20">
+                      {feature.title}
+                    </td>
                     {values.map((cell, i) => (
                       <td key={i} className="p-4 text-center text-gray-200">
                         {cell === "✔" ? (
@@ -147,10 +149,10 @@ const PricingTable = () => {
                 );
               })}
               <tr>
-                <td />
+                <td className="sticky left-0 bg-[#141414]/80 rounded-bl-md  backdrop-blur-xl z-20" />
                 {plans.map((_, i) => (
                   <td key={i} className="p-4 text-center">
-                    <Button className="bg-[#4CFFAB] text-black hover:bg-[#00FF67] w-full rounded-sm">
+                    <Button className="bg-[#4CFFAB] text-black  hover:bg-[#00FF67] w-full rounded-sm">
                       Purchase
                     </Button>
                   </td>
