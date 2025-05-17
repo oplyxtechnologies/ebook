@@ -34,13 +34,15 @@ const Navbar = () => {
       <div className="flex  mx-auto px-4  pb-0 gap-4">
         {/* Top Row */}
         <div className="flex max-w-7xl justify-between items-center mx-auto gap-4 w-full">
-          <Image
-            src="/logo.svg"
-            alt="Stuzip"
-            width={100}
-            height={100}
-            className="h-10 w-auto"
-          />
+          <a href="/">
+            <Image
+              src="/logo.svg"
+              alt="Stuzip"
+              width={100}
+              height={100}
+              className="h-10 w-auto"
+            />
+          </a>
 
           <Button className="cursor-pointer rounded-sm">Sign In</Button>
         </div>
