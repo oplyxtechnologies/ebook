@@ -79,7 +79,7 @@ const AuthForm = () => {
 
       <form
         onSubmit={handleSubmit}
-        className="bg-[#616161]/[0.13] border border-white/10 backdrop-blur-4xl rounded-xl shadow-xl w-full max-w-md px-8 py-10 space-y-6 transition-all duration-500"
+        className="bg-[#616161]/[0.13] mt-16 border border-white/10 backdrop-blur-4xl rounded-xl shadow-xl w-full max-w-md px-8 py-10 space-y-6 transition-all duration-500"
       >
         <h2 className="text-xl font-semibold text-center capitalize">
           {
