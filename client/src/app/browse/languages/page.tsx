@@ -1,4 +1,4 @@
-import HeroSection from "@/components/Hero/Hero";
+import HeroSection from "@/components/Landing/Hero";
 import React from "react";
 
 const page = () => {
